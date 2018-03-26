@@ -1,6 +1,9 @@
 app.controller('loginController', ['$scope','$location','userFactory', function($scope, $location, UserFactory){  
+    var login = "<h1>LOGIN</h1>"; 
+    var register = "<h1>REGISTER</h1>";
     $scope.loginErr = "";
     $scope.regErr = "";
+
     $scope.create = function(user, isValid){
         if(isValid){
             UserFactory.create(user,function(res){

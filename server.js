@@ -28,6 +28,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json({extended:true}))
 
 app.use(express.static(path.join(__dirname, './bower_components')));
+app.use(express.static(path.join(__dirname, './node_modules')));
 app.use(express.static(path.join(__dirname, './client')));
 app.use(express.static(path.join(__dirname, './client/static')));
 
