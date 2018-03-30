@@ -15,7 +15,7 @@ app.controller('questionController', ['$scope','$location','userFactory', 'quest
     $scope.createQuestion= function(question, isValid){
         if(isValid){
             questionFactory.create(question);
-            $location.url('/dashboard');
+            $location.url('/profile');
         } else {
             $scope.qErr = "Too short";
         }

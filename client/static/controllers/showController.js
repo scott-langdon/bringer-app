@@ -22,7 +22,7 @@ app.controller('showController', ['$scope','$location','userFactory', 'showFacto
 
     $scope.createQuestion= function(question){
         questionFactory.create(question);
-        $location.url('/dashboard');
+        $location.url('/profile');
     }
 
 }])

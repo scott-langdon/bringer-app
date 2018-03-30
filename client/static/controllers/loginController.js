@@ -1,6 +1,4 @@
-app.controller('loginController', ['$scope','$location','userFactory', function($scope, $location, UserFactory){  
-    var login = "<h1>LOGIN</h1>"; 
-    var register = "<h1>REGISTER</h1>";
+app.controller('loginController', ['$scope','$location','userFactory', function($scope, $location, UserFactory){
     $scope.loginErr = "";
     $scope.regErr = "";
 
@@ -10,7 +8,7 @@ app.controller('loginController', ['$scope','$location','userFactory', function(
                 if(res.data.duplicate){
                     $scope.regErr = "Username must be unique";
                 } else {
-                    $location.url('/dashboard');
+                    $location.url('/profile');
                 }
             })
         } else{
@@ -20,7 +18,7 @@ app.controller('loginController', ['$scope','$location','userFactory', function(
     $scope.login = function(user, isValid){
         if (isValid){
             UserFactory.login(user,function(){
-                $location.url('/dashboard');
+                $location.url('/events');
             })
         } else {
             $scope.loginErr = "Invalid Combination";

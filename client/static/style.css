@@ -97,3 +97,28 @@ body {
   opacity: 1;
   padding: 10px;
 }
+
+/*calender button */
+.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+
+
+
+
+
+/*event page */
+
+
+
+
+
+
+

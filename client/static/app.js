@@ -1,11 +1,5 @@
 // front end routings 
-var app = angular.module('appName', ['ngRoute', 'ngAnimate', 'ui.bootstrap']);
-
-app.directive('register', function() {
-  return {
-    templateUrl: 'register.html'
-  };
-});
+var app = angular.module('appName', ['ngRoute', 'ngAnimate', 'ui.bootstrap', 'ngSanitize', 'datetime']);
 
 app.config(function($routeProvider, $httpProvider){
     $httpProvider.interceptors.push(
@@ -25,13 +19,13 @@ app.config(function($routeProvider, $httpProvider){
             templateUrl:'partials/login.html',
             controller:'loginController'
         })
-        .when('/landing', {
-            templateUrl:'partials/landing.html',
-            // controller:'loginController'
+        .when('/events', {
+            templateUrl:'partials/events.html',
+            controller:'eventController'
         })
-        .when('/dashboard', {
-            templateUrl:'partials/dashboard.html',
-            controller: 'dashboardController'
+        .when('/profile', {
+            templateUrl:'partials/profile.html',
+            controller: 'profileController'
         })
         .when('/new_question', {
             templateUrl:'partials/question.html',

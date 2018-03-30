@@ -7,6 +7,11 @@ var UserSchema = new mongoose.Schema({
     	required: true,
     	trim: true
     },
+    email: {
+      type: String, 
+      required: true,
+      trim: true
+    },
     password: {
     	type: String,
     	required: true,
@@ -16,4 +21,5 @@ var UserSchema = new mongoose.Schema({
   _answers: [{type: Schema.Types.ObjectId, ref: 'Answer'}]
 },{timestamps: true}); 
 
-mongoose.model('User', UserSchema);
+var User = mongoose.model('User', UserSchema);
+module.exports = User;

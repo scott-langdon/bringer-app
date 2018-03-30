@@ -9,6 +9,10 @@
 
     <script src="/angular/angular.min.js"></script>
     <script src="/angular-animate/angular-animate.min.js"></script>
+    <!-- <script src="/angular-datetime-input/dist/datetime.js"></script> -->
+    <script src="https://unpkg.com/angular-datetime-input"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
     <script src="/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/style.css">
@@ -20,19 +24,22 @@
     <script src="/app.js"></script>
 
     <script src="/factories/userFactory.js"></script>
-    <script src="/factories/dashboardFactory.js"></script>
+    <script src="/factories/profileFactory.js"></script>
     <script src="/factories/questionFactory.js"></script>
     <script src="/factories/showFactory.js"></script>
     <script src="/factories/answerFactory.js"></script>
+    <script src="/factories/eventFactory.js"></script>
     
     <script src="/controllers/loginController.js"></script>
-    <script src="/controllers/dashboardController.js"></script>
+    <script src="/controllers/profileController.js"></script>
     <script src="/controllers/questionController.js"></script>
     <script src="/controllers/showController.js"></script>
     <script src="/controllers/answerController.js"></script>
+    <script src="/controllers/eventController.js"></script>
 
 </head>
 <body>
+
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -42,20 +49,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">BRINGER</a>
+          <a class="navbar-brand" href="#/events">BRINGER</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
+            <li><a href="#/events">Events</a></li>
+            <li><a href="#/profile">Profile</a></li>
+            <li><a ng-click="logout()">Logout</a></li>
           </ul>
         </div>
       </div>
     </nav>
+
     <div ng-view></div>
+
 </body>
 </html>
-
-
 
 
 

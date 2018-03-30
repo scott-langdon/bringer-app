@@ -5,7 +5,7 @@ module.exports = {
         res.json(req.session.user);
     },
     create: function(req,res){
-        User.findOne({username: req.body.username}).exec(function(err, user){
+        User.findOne({email: req.body.email}).exec(function(err, user){
             if(user){
                 res.json({duplicate: true});
             } else{
@@ -26,7 +26,7 @@ module.exports = {
         })
    },
    login:function(req,res){
-        User.findOne({username:req.body.username}).exec(function(err,user){
+        User.findOne({email:req.body.email}).exec(function(err,user){
           if (user){
             if(user.password != req.body.password){
                 res.sendStatus(400);

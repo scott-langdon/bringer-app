@@ -1,5 +1,5 @@
 <a href="" ng-click="logout()">Logout</a><br>
-<a href="#/dashboard">Home</a>
+<a href="#/profile">Home</a>
 <h1>New Question</h1>
 <form name="qField" ng-submit ="createQuestion(question, qField.$valid)" novalidate>
 	<label>Question
@@ -8,7 +8,7 @@
 	<label>Description (optional)
 		<textarea rows="8" cols="40" ng-model="question.description"></textarea>
 	</label>
-	<button><a href="#/dashboard">Cancel</a></button>
+	<button><a href="#/profile">Cancel</a></button>
 	<button>Submit</button>
 </form>
 <p ng-if="qErr">{{qErr}}</p>

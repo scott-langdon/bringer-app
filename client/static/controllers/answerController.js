@@ -21,7 +21,7 @@ app.controller('answerController', ['$scope','$location','userFactory', 'answerF
     $scope.createAnswer= function(answer, isValid){
         if(isValid){
             answerFactory.create($routeParams.id, answer);
-            $location.url('/dashboard');
+            $location.url('/profile');
         } else {
             $scope.aErr = "Too Short";
         }

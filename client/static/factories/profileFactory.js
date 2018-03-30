@@ -1,4 +1,4 @@
-app.factory('dashboardFactory', ['$http', function($http) {
+app.factory('profileFactory', ['$http', function($http) {
   return {
     index: function(callback) {
       $http({

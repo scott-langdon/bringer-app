@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 var Question = mongoose.model('Question');
 var User = mongoose.model('User');
+
 module.exports = {
 	index: function(req, res) {
     Question.find({}).populate('_user').exec(function(err, questions) {
@@ -33,7 +34,14 @@ module.exports = {
     })
   },
 	create: function(req, res){
-		var question = new Question({_user:req.session.user._id, question:req.body.question, description:req.body.description});
+		var question = new Question(
+      {
+              _user:req.session.user._id, 
+           question:req.body.question, 
+        description:req.body.description
+      }
+    );
+    console.log(question);
     question.save(function(err, question) {
       if(err) {
         res.status(500).json(err);

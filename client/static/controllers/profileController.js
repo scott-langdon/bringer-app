@@ -1,4 +1,4 @@
-app.controller('dashboardController', ['$scope','$location','userFactory', 'dashboardFactory', function($scope, $location, userFactory, dashboardFactory){
+app.controller('profileController', ['$scope','$location','userFactory', 'profileFactory', function($scope, $location, userFactory, profileFactory){
     $scope.currentUser = {};
 
     userFactory.getCurrentUser(function(user){
@@ -8,13 +8,14 @@ app.controller('dashboardController', ['$scope','$location','userFactory', 'dash
     $scope.logout = function(user, isValid){
         userFactory.logout(function() {
         $scope.currentUser = {};
-        $location.url('');
+        $location.url('/');
         });    
     }
 
     function updateQuestions() {
-        dashboardFactory.index(function(res) {
+        profileFactory.index(function(res) {
             $scope.questions = res.data; 
+            console.log(res.data)
         })
     }
     updateQuestions();
