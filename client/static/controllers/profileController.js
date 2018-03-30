@@ -15,7 +15,7 @@ app.controller('profileController', ['$scope','$location','userFactory', 'profil
     function updateQuestions() {
         profileFactory.index(function(res) {
             $scope.questions = res.data; 
-            console.log(res.data)
+            // console.log($scope.questions);
         })
     }
     updateQuestions();

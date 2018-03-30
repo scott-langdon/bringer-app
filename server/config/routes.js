@@ -22,7 +22,7 @@ module.exports = function(app){
     app.get('/like/:id', answers.like);
     
     app.post('/new_event', events.create);
-    app.post('/getEvents', events.index);
+    app.get('/getEvents', events.index);
     
 }
 function userAuth(req,res,next){

@@ -18,7 +18,8 @@ var UserSchema = new mongoose.Schema({
       trim: true
     },
   _questions: [{type: Schema.Types.ObjectId, ref: 'Question'}],
-  _answers: [{type: Schema.Types.ObjectId, ref: 'Answer'}]
+  _answers: [{type: Schema.Types.ObjectId, ref: 'Answer'}],
+  _events: [{type: Schema.Types.ObjectId, ref: 'Event'}]
 },{timestamps: true}); 
 
 var User = mongoose.model('User', UserSchema);

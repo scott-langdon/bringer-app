@@ -4,14 +4,15 @@ var User = mongoose.model('User');
 
 module.exports = {
 	index: function(req, res) {
-		Event.find({}).populate('_user').exec(function(err, events) {
-			if(err) {
-				res.status(500).json(err);
-			} else {
-				res.json(events);
-			}
-		}); 
-	}, 
+	 Event.find({}).populate('_user').exec(function(err, events) {
+	     if(err) {
+	      res.status(500).json(err);
+	     } else {
+	       res.json(events);
+	       console.log(events);
+		 }
+	 });
+	},
 	show: function(req, res){
 		Event.findOne({_id: req.params.id}).populate([
 			{

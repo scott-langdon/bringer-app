@@ -16,20 +16,14 @@ $scope.createEvent = function(event, isValid){
 	}
 }
 
-// function updateEvents() {
-// 	eventFactory.index(function(res) {
-// 		$scope.events = res.data; 
-// 	})
-// }
-// updateEvents();
-
-
-function updateUsers() {
-  userFactory.index(function(res) {
-    $scope.users = res.data; 
+function updateEvents() {
+	eventFactory.index(function(res) {
+		$scope.events = res.data; 
   })
 }
-updateUsers();
+updateEvents();
+
+
 
 // DATE PICKER CODE
   $scope.today = function() {
