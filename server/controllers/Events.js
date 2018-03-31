@@ -9,7 +9,6 @@ module.exports = {
 	      res.status(500).json(err);
 	     } else {
 	       res.json(events);
-	       console.log(events);
 		 }
 	 });
 	},

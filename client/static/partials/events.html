@@ -1,12 +1,12 @@
-<h1>User loged in as: {{currentUser.username}}</h1>
-
 <div class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">  
     		<h1 class="text-center">My Events</h1>
-    		<div class="account-wall"> 
-        		<ul ng-repeat="event in events">
-	        		<li><a href="#">{{event["eventName"]}}</a></li>
+    		<div class="account-wall" style="height: 200px; overflow: scroll"> 
+    		    <input ng-model="searchText" placeholder="Search...">
+        		<ul ng-repeat="event in events | orderBy: '-updatedAt' | filter:searchText">
+	        		<li><a href="#/event/{{event['_id']}}">{{event["eventName"]}}</a></li>
+	        		<!-- <a href="#/question/{{question._id}}">Show</a> -->
         		</ul>
     		</div>
         </div>

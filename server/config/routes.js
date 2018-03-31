@@ -24,6 +24,8 @@ module.exports = function(app){
     app.post('/new_event', events.create);
     app.get('/getEvents', events.index);
     
+    app.get('/getOneEvent/:id', events.show);
+    
 }
 function userAuth(req,res,next){
     if (req.session.user){

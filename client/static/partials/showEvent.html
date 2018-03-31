@@ -1,0 +1,12 @@
+<div class='container text-center mb-5'> <!-- EVENT DETAILS -->
+  <h1 id="marty" class='display-1 mt-5'>{{event.eventName}}</h1>
+  <p class='lead'>{{event.location}}</p>
+  <p class='lead'>Host: {{event._user.username}}</p>
+  <h4 class='display-5 mb-3'>{{event.date | date:'medium'}}</h4>
+  <p class='lead'>Current User: <span id="currentUser" style="color:red">{{currentUser.username}}</span></p>
+  Status: <select id="selectStatus" class="custom-select" id="inputGroupSelect02" style="">
+    <option value="maybe">MAYBE</option>
+    <option value="going">GOING</option>
+    <option value="notGoing">NOT GOING</option>
+  </select>
+</div><!-- /EVENT DETAILS -->

@@ -10,7 +10,7 @@ $scope.createEvent = function(event, isValid){
 	if(isValid) {
 		eventFactory.create(event); 
 		// test later to automatically show this w/o page refresh, may need to use AJAX
-		$location.url('/profile'); 
+		// $location.url('/profile'); 
 	} else {
 		$scope.eventErr = "Too short"
 	}

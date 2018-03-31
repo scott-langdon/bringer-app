@@ -39,6 +39,10 @@ app.config(function($routeProvider, $httpProvider){
             templateUrl:'partials/answer.html',
             controller: 'answerController'
         })
+        .when('/event/:id', {
+            templateUrl:'partials/showEvent.html',
+            controller: 'showEventController'
+        })
         .otherwise({
             redirectTo:'/'
         })
