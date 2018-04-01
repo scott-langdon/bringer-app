@@ -35,6 +35,8 @@ app.use(express.static(path.join(__dirname, './client/static')));
 /*routes*/
 require('./server/config/routes.js')(app);
 
-app.listen(8001, function(){
-    console.log("You can find this at port:8001!");
+var port = process.env.PORT || 8080; 
+
+app.listen(port, function(){
+    console.log("You can find this at port:" + port);
 });
