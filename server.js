@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var mongoose = require('mongoose');
-mongoose.connect("mongodb://localhost:27017/bringer3");
+mongoose.connect("mongodb://admin:james2005@ds023463.mlab.com:23463/bringer4");
 var db = mongoose.connection;
 require('./server/config/mongoose.js');
 var app = express();
