@@ -19,6 +19,10 @@ app.config(function($routeProvider, $httpProvider){
             templateUrl:'partials/login.html',
             controller:'loginController'
         })
+        .when('/register', {
+            templateUrl:'partials/register.html',
+            controller:'loginController'
+        })
         .when('/events', {
             templateUrl:'partials/events.html',
             controller:'eventController'

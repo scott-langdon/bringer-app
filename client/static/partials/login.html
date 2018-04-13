@@ -1,5 +1,5 @@
 <!-- Login Form -->
-<div class="container">
+<div ng-hide="showRegister" class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
             <h1 class="text-center login-title">Sign in to continue to Bringer</h1>
@@ -13,28 +13,7 @@
                 </form>
                 <p ng-if="loginErr">{{loginErr}}</p>
             </div>
-            <a href ng-click="switchToRegister()" class="text-center new-account">Create an account</a>
-        </div>
-    </div>
-</div>
-
-
-<!-- Registration Form -->
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h1 class="text-center login-title">Register to continue to Bringer</h1>
-            <div class="account-wall">
-                <form class="form-signin" name="regField" ng-submit="create(user, regField.$valid)" novalidate>
-                    <input type="text" class="form-control" placeholder="First & Last Name" ng-model="user.username" required autofocus>
-                    <input type="text" class="form-control" placeholder="Email" ng-model="user.email" required autofocus>
-                    <input type="password" class="form-control" style="margin-bottom: -2px" placeholder="Password" ng-model="user.password" required autofocus>
-                    <input type="password" class="form-control" placeholder="Confirm Password" ng-model="user.pw_confirm" required autofocus>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
-                </form>
-                <p ng-if="loginErr">{{loginErr}}</p>
-            </div>
-            <p class="text-center new-account">Already have an account? <a href="#">Login</a></p>
+            <a href="#/register" class="text-center new-account" style="cursor: pointer;">Create an account</a>
         </div>
     </div>
 </div>
